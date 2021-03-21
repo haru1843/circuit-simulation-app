@@ -11,13 +11,21 @@ function App() {
       <BrowserRouter>
         <Header></Header>
         <Switch>
-          <Route exec="/">
+          <Route exact path="/">
             <div>hoge</div>
           </Route>
-          <Route path="/usage">usage</Route>
-          <Route path="/exercise">exercise</Route>
-          <Route path="/work1">work1</Route>
-          <Route path="/work2">work2</Route>
+          <Route exact path="/usage">
+            usage
+          </Route>
+          <Route exact path="/exercise">
+            exercise
+          </Route>
+          <Route exact path="/work1">
+            work1
+          </Route>
+          <Route exact path="/work2">
+            work2
+          </Route>
           <Route>not found</Route>
         </Switch>
       </BrowserRouter>
