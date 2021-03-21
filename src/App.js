@@ -11,7 +11,7 @@ function App() {
       <BrowserRouter>
         <Header></Header>
         <Switch>
-          <Route path="/top">
+          <Route exec="/">
             <div>hoge</div>
           </Route>
           <Route path="/usage">usage</Route>

@@ -69,7 +69,7 @@ function Header(props) {
             <span>回路シミュレータ</span>
             <div className="header-right">
               <div className="link-div">
-                <Link to="/top">トップ</Link>
+                <Link to="/">トップ</Link>
               </div>
               <div className="link-div">
                 <Link to="/usage">使い方</Link>
