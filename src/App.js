@@ -18,6 +18,7 @@ function App() {
           <Route path="/exercise">exercise</Route>
           <Route path="/work1">work1</Route>
           <Route path="/work2">work2</Route>
+          <Route>not found</Route>
         </Switch>
       </BrowserRouter>
     </div>
