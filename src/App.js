@@ -1,51 +1,44 @@
-import logo from "./logo.svg";
 import "./App.css";
 
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
+import styled from "styled-components";
+
 import Header from "./views/components/header";
+import Top from "./views/pages/top";
+
+const AppDiv = styled.div`
+  div.body-container {
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+`;
 
 function App() {
   return (
-    <div>
+    <AppDiv>
       <BrowserRouter>
         <Header></Header>
-        <Switch>
-          <Route exact path="/">
-            <div>hoge</div>
-          </Route>
-          <Route exact path="/usage">
-            usage
-          </Route>
-          <Route exact path="/exercise">
-            exercise
-          </Route>
-          <Route exact path="/work1">
-            work1
-          </Route>
-          <Route exact path="/work2">
-            work2
-          </Route>
-          <Route>not found</Route>
-        </Switch>
+        <div className="body-container">
+          <Switch>
+            <Route exact path="/" component={Top}></Route>
+            <Route exact path="/usage">
+              usage
+            </Route>
+            <Route exact path="/exercise">
+              exercise
+            </Route>
+            <Route exact path="/work1">
+              work1
+            </Route>
+            <Route exact path="/work2">
+              work2
+            </Route>
+            <Route>not found</Route>
+          </Switch>
+        </div>
       </BrowserRouter>
-    </div>
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
+    </AppDiv>
   );
 }
 
