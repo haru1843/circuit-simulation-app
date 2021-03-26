@@ -52,10 +52,70 @@
       rel="stylesheet"
     />
     <title>回路シミュレータ</title>
+    <script>
+      function setCircuit1() {
+        // const simcirElement = document.getElementsByClassName("simcir");
+
+        // simcir.setupSimcir(simcirElement, {
+        //   height: 700,
+        //   width: 2000,
+        //   showToolbox: true,
+        //   toolbox: [
+        //     { type: "DC" },
+        //     { type: "Toggle" },
+        //     { type: "OR" },
+        //     { type: "OR", label: "3OR", numInputs: 3 },
+        //     { type: "AND" },
+        //     { type: "AND", label: "3AND", numInputs: 3 },
+        //     { type: "NOT" },
+        //     { type: "EOR", label: "XOR", numInputs: 2 },
+        //     { type: "JK-FF" },
+        //     { type: "PushOn" },
+        //     { type: "LED" },
+        //     { type: "7seg" },
+        //     { type: "4bit7seg" },
+        //   ],
+        // });
+
+        simcir.setupSimcir(
+          document.getElementsByClassName("simcir"),
+          JSON.parse(document.getElementById("set-circuit-1").value)
+        );
+      }
+      function updateCircuit() {
+        let circuit = JSON.parse(
+          simcir
+            .controller(document.getElementsByClassName("simcir-workspace"))
+            .text()
+        );
+        const uploadCircuit = JSON.parse(
+          document.getElementById("update-circuit").value
+        );
+
+        circuit.devices = uploadCircuit.devices;
+        circuit.connectors = uploadCircuit.connectors;
+
+        simcir.setupSimcir(document.getElementsByClassName("simcir"), circuit);
+      }
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <input
+      id="set-circuit-1"
+      type="button"
+      onclick="setCircuit1()"
+      style="display: none; height: 0; width: 0"
+      value='{"width": 2000, "height": 700}'
+    />
+    <input
+      id="update-circuit"
+      type="button"
+      onclick="updateCircuit()"
+      style="display: none; height: 0; width: 0"
+      value='{"width": 2000, "height": 700}'
+    />
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -68,7 +128,6 @@
     -->
   </body>
 </html>
-
 <style>
   html {
     /* 16px @ 768px increasing to 24px @ 1920px */
