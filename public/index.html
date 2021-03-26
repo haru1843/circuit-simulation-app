@@ -54,28 +54,6 @@
     <title>回路シミュレータ</title>
     <script>
       function loadCircuit(circuitIdx) {
-        // const simcirElement = document.getElementsByClassName("simcir");
-
-        // simcir.setupSimcir(simcirElement, {
-        //   height: 700,
-        //   width: 2000,
-        //   showToolbox: true,
-        //   toolbox: [
-        //     { type: "DC" },
-        //     { type: "Toggle" },
-        //     { type: "OR" },
-        //     { type: "OR", label: "3OR", numInputs: 3 },
-        //     { type: "AND" },
-        //     { type: "AND", label: "3AND", numInputs: 3 },
-        //     { type: "NOT" },
-        //     { type: "EOR", label: "XOR", numInputs: 2 },
-        //     { type: "JK-FF" },
-        //     { type: "PushOn" },
-        //     { type: "LED" },
-        //     { type: "7seg" },
-        //     { type: "4bit7seg" },
-        //   ],
-        // });
         const circuitSturctures = [
           {
             height: 700,
@@ -105,7 +83,6 @@
         simcir.setupSimcir(
           document.getElementsByClassName("simcir"),
           circuitSturctures[circuitIdx]
-          // JSON.parse(document.getElementById("set-circuit-1").value)
         );
       }
       function updateCircuit() {
