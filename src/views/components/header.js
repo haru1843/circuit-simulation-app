@@ -53,6 +53,7 @@ const HeaderDiv = styled.div`
       &:hover {
         background-position: left;
         a {
+          color: rgb(250, 250, 250);
           text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.5);
         }
       }
