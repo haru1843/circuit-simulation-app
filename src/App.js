@@ -23,13 +23,25 @@ function App() {
         <Header></Header>
         <div className="body-container">
           <Switch>
-            <Route exact path="/" component={Top}></Route>
-            <Route exact path="/usage" component={Usage}></Route>
-            <Route exact path="/exercise" component={Exercise}></Route>
-            <Route exact path="/work1">
+            <Route
+              exact
+              path="/circuit-simulation-app/"
+              component={Top}
+            ></Route>
+            <Route
+              exact
+              path="/circuit-simulation-app/usage"
+              component={Usage}
+            ></Route>
+            <Route
+              exact
+              path="/circuit-simulation-app/exercise"
+              component={Exercise}
+            ></Route>
+            <Route exact path="/circuit-simulation-app/work1">
               work1
             </Route>
-            <Route exact path="/work2">
+            <Route exact path="/circuit-simulation-app/work2">
               work2
             </Route>
             <Route>not found</Route>

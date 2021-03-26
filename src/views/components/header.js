@@ -69,19 +69,19 @@ function Header(props) {
             <span>回路シミュレータ</span>
             <div className="header-right">
               <div className="link-div">
-                <Link to="/">トップ</Link>
+                <Link to="/circuit-simulation-app/">トップ</Link>
               </div>
               <div className="link-div">
-                <Link to="/usage">使い方</Link>
+                <Link to="/circuit-simulation-app/usage">使い方</Link>
               </div>
               <div className="link-div">
-                <Link to="/exercise">練習</Link>
+                <Link to="/circuit-simulation-app/exercise">練習</Link>
               </div>
               <div className="link-div">
-                <Link to="/work1">課題1</Link>
+                <Link to="/circuit-simulation-app/work1">課題1</Link>
               </div>
               <div className="link-div">
-                <Link to="/work2">課題2</Link>
+                <Link to="/circuit-simulation-app/work2">課題2</Link>
               </div>
             </div>
           </Toolbar>
