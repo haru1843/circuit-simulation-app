@@ -8,7 +8,7 @@ const WorkspaceDiv = styled.div`
   div.cjb-load-container {
     margin-bottom: 20px;
     display: grid;
-    grid-template-columns: 1fr 300px 1fr 300px 1fr;
+    grid-template-columns: 1fr 304px 1fr 304px 1fr;
 
     div.pad {
       display: inline-block;
@@ -26,7 +26,7 @@ const WorkspaceDiv = styled.div`
       z-index: -1;
     }
 
-    a,
+    button,
     label {
       font-size: 1.1rem;
       display: inline-block;
@@ -39,7 +39,8 @@ const WorkspaceDiv = styled.div`
       border-radius: 5px;
       border: 2px solid #666;
 
-      /* font-size: 2rem; */
+      text-align: left;
+
       position: relative;
       padding: 0;
 
@@ -173,19 +174,26 @@ function Workspace(props) {
       <div className="cjb-load-container">
         <div className="pad"></div>
         <div className="button-div">
-          <a id="dl-button" type="file" href="/#" onClick={(e) => download(e)}>
+          {/* <a id="dl-button" type="file" href="/#" onClick={(e) => download(e)}>
             <span className="dummy-icon"></span>
             <img
               src={`${process.env.PUBLIC_URL}/load-button/dl.svg`}
               alt="ダウンロードの画像"
             ></img>
             <span className="button-text">回路構成をダウンロード</span>
-          </a>
+          </a> */}
+          <button id="dl-button" onClick={(e) => download(e)}>
+            <span className="dummy-icon"></span>
+            <img
+              src={`${process.env.PUBLIC_URL}/load-button/dl.svg`}
+              alt="ダウンロードの画像"
+            ></img>
+            <span className="button-text">回路構成をダウンロード</span>
+          </button>
         </div>
         <div className="pad"></div>
         <div className="button-div">
           <input type="file" id="ul-button" onChange={(e) => upload(e)}></input>
-          <span className="dummy-icon"></span>
           <label htmlFor="ul-button">
             <span className="dummy-icon"></span>
             <img
