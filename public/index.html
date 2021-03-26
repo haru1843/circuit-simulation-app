@@ -88,14 +88,22 @@
             .controller(document.getElementsByClassName("simcir-workspace"))
             .text()
         );
-        const uploadCircuit = JSON.parse(
-          document.getElementById("update-circuit").value
-        );
+        try {
+          const uploadCircuit = JSON.parse(
+            document.getElementById("update-circuit").value
+          );
 
-        circuit.devices = uploadCircuit.devices;
-        circuit.connectors = uploadCircuit.connectors;
+          circuit.devices = uploadCircuit.devices;
+          circuit.connectors = uploadCircuit.connectors;
 
-        simcir.setupSimcir(document.getElementsByClassName("simcir"), circuit);
+          simcir.setupSimcir(
+            document.getElementsByClassName("simcir"),
+            circuit
+          );
+        } catch (error) {
+          alert(error.name);
+          alert(error.message);
+        }
       }
     </script>
   </head>

@@ -140,7 +140,7 @@ function Workspace(props) {
     document.getElementById("update-circuit").click();
   };
 
-  const fileChangeFunc = function (e) {
+  const fileChangeFunc = function (event) {
     var reader_ = new FileReader();
 
     reader_.onload = function () {
@@ -150,27 +150,12 @@ function Workspace(props) {
       for (let i = 0; i < text_array.length; i++) {
         text_array[i] -= date_array[8];
       }
-      let text = new TextDecoder("utf-8").decode(text_array);
 
-      try {
-        updateCircuit(text);
-      } catch (e) {
-        // e.name
-        // e.message
+      const text = new TextDecoder("utf-8").decode(text_array);
 
-        // swal({
-        //   title: "InputFileError!",
-        //   text: "選択したファイルに誤りがあります\n違うファイルを選択してください",
-        //   icon: "error",
-        //   button: {
-        //     text: "OK"
-        //   }
-        // });
-
-        alert(e.name);
-      }
+      updateCircuit(text);
     };
-    reader_.readAsArrayBuffer(e.target.files[0]);
+    reader_.readAsArrayBuffer(event.target.files[0]);
   };
 
   return (
