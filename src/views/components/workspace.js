@@ -128,11 +128,12 @@ const WorkspaceDiv = styled.div`
 `;
 
 function Workspace(props) {
-  const setButtonId = `set-circuit-${props.setButtonIdx}`;
+  const initCircuit = '{"height": 700, "width":2000}';
+  const loadButtonId = `load-circuit-${props.loadCircuitIdx}`;
 
   // class componentでの'componentDidMout' とか 'componentDidUpdate'とかと類似
   useEffect(() => {
-    document.getElementById(setButtonId).click();
+    document.getElementById(loadButtonId).click();
   });
 
   const updateCircuit = function (text) {
@@ -192,7 +193,7 @@ function Workspace(props) {
         <div className="pad"></div>
       </div>
       <div className="simcir-container">
-        <div className="simcir"></div>
+        <div className="simcir">{initCircuit}</div>
       </div>
     </WorkspaceDiv>
   );
