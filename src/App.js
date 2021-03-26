@@ -6,6 +6,8 @@ import styled from "styled-components";
 
 import Header from "./views/components/header";
 import Top from "./views/pages/top";
+import Usage from "./views/pages/usage";
+import Exercise from "./views/pages/exercise";
 
 const AppDiv = styled.div`
   div.body-container {
@@ -22,12 +24,8 @@ function App() {
         <div className="body-container">
           <Switch>
             <Route exact path="/" component={Top}></Route>
-            <Route exact path="/usage">
-              usage
-            </Route>
-            <Route exact path="/exercise">
-              exercise
-            </Route>
+            <Route exact path="/usage" component={Usage}></Route>
+            <Route exact path="/exercise" component={Exercise}></Route>
             <Route exact path="/work1">
               work1
             </Route>
