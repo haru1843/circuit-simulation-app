@@ -8,6 +8,8 @@ import Header from "./views/components/header";
 import Top from "./views/pages/top";
 import Usage from "./views/pages/usage";
 import Exercise from "./views/pages/exercise";
+import Work1 from "./views/pages/work1";
+import Work2 from "./views/pages/work2";
 
 const AppDiv = styled.div`
   div.body-container {
@@ -38,12 +40,16 @@ function App() {
               path="/circuit-simulation-app/exercise"
               component={Exercise}
             ></Route>
-            <Route exact path="/circuit-simulation-app/work1">
-              work1
-            </Route>
-            <Route exact path="/circuit-simulation-app/work2">
-              work2
-            </Route>
+            <Route
+              exact
+              path="/circuit-simulation-app/work1"
+              component={Work1}
+            ></Route>
+            <Route
+              exact
+              path="/circuit-simulation-app/work2"
+              component={Work2}
+            ></Route>
             <Route>not found</Route>
           </Switch>
         </div>
