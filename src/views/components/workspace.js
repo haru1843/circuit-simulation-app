@@ -28,7 +28,7 @@ const WorkspaceDiv = styled.div`
 
     button,
     label {
-      font-size: 1.1rem;
+      font-size: 0.9rem;
       display: inline-block;
       width: 100%;
       height: 50px;
