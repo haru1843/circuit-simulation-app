@@ -12,7 +12,10 @@ function Usage() {
   return (
     <UsageDiv>
       <h1>使い方</h1>
-      <Workspace></Workspace>
+      <Workspace
+        loadCircuitIdx={0}
+        saveFileName="t00b000x_usage.cjb"
+      ></Workspace>
     </UsageDiv>
   );
 }

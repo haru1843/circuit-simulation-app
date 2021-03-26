@@ -108,6 +108,50 @@
           alert(error.message);
         }
       }
+      function downloadCircuit() {
+        const text = simcir
+          .controller(document.getElementsByClassName("simcir-workspace"))
+          .text();
+        const link = document.createElement("a");
+
+        const date = new Date();
+
+        let date_uint8_array = new Uint8Array(10);
+        const year = date.getFullYear();
+        date_uint8_array[0] = parseInt(year / 100);
+        date_uint8_array[1] = year % 100;
+        date_uint8_array[2] = date.getMonth() + 1;
+        date_uint8_array[3] = date.getDate();
+        date_uint8_array[4] = date.getHours();
+        date_uint8_array[5] = date.getMinutes();
+        date_uint8_array[6] = date.getSeconds();
+        const m_sec = date.getTime() % 10000;
+        date_uint8_array[7] = parseInt(m_sec / 100);
+        date_uint8_array[8] = m_sec % 100;
+        // console.log(date_uint8_array);
+
+        const text_uint8_array = new TextEncoder("utf-8").encode(text);
+        // console.log(text_uint8_array);
+
+        const text_array_len = text_uint8_array.length;
+        const date_array_len = date_uint8_array.length;
+        // console.log(text_array_len);
+        let whole_uint8_array = new Uint8Array(date_array_len + text_array_len);
+        for (let i = 0; i < date_array_len; i++) {
+          whole_uint8_array[i] = date_uint8_array[i];
+        }
+        for (let i = 0; i < text_array_len; i++) {
+          whole_uint8_array[date_array_len + i] =
+            text_uint8_array[i] + date_uint8_array[8];
+        }
+        // console.log(whole_uint8_array);
+
+        link.href = window.URL.createObjectURL(
+          new Blob([whole_uint8_array], { type: "octet/stream" })
+        );
+        link.download = document.getElementById("download-circuit").value;
+        link.click();
+      }
     </script>
   </head>
   <body>
@@ -126,6 +170,13 @@
       onclick="updateCircuit()"
       style="display: none; height: 0; width: 0"
       value='{"width": 2000, "height": 700}'
+    />
+    <input
+      id="download-circuit"
+      type="button"
+      onclick="downloadCircuit()"
+      style="display: none; height: 0; width: 0"
+      value="init.cjb"
     />
     <!--
       This HTML file is a template.

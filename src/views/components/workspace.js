@@ -128,6 +128,10 @@ const WorkspaceDiv = styled.div`
 `;
 
 function Workspace(props) {
+  // props
+  //  .loadCircuitIdx: 初期ロード対象の回路インデックス(0始まり)
+  //  .saveFileName: 回路構成ダウンロード時のファイル名
+
   const initCircuit = '{"height": 700, "width":2000}';
   const loadButtonId = `load-circuit-${props.loadCircuitIdx}`;
 
@@ -141,7 +145,7 @@ function Workspace(props) {
     document.getElementById("update-circuit").click();
   };
 
-  const fileChangeFunc = function (event) {
+  const upload = function (event) {
     var reader_ = new FileReader();
 
     reader_.onload = function () {
@@ -159,12 +163,17 @@ function Workspace(props) {
     reader_.readAsArrayBuffer(event.target.files[0]);
   };
 
+  const download = function (event) {
+    document.getElementById("download-circuit").value = props.saveFileName;
+    document.getElementById("download-circuit").click();
+  };
+
   return (
     <WorkspaceDiv>
       <div className="cjb-load-container">
         <div className="pad"></div>
         <div className="button-div">
-          <a id="dl-button" type="file" href="/#">
+          <a id="dl-button" type="file" href="/#" onClick={(e) => download(e)}>
             <span className="dummy-icon"></span>
             <img
               src={`${process.env.PUBLIC_URL}/load-button/dl.svg`}
@@ -175,11 +184,7 @@ function Workspace(props) {
         </div>
         <div className="pad"></div>
         <div className="button-div">
-          <input
-            type="file"
-            id="ul-button"
-            onChange={(e) => fileChangeFunc(e)}
-          ></input>
+          <input type="file" id="ul-button" onChange={(e) => upload(e)}></input>
           <span className="dummy-icon"></span>
           <label htmlFor="ul-button">
             <span className="dummy-icon"></span>
