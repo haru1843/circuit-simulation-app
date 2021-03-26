@@ -121,15 +121,19 @@ section.doc {
     }
   }
 
-  span.hl1 {
-    font-weight: 700;
-    color: rgb(90, 115, 161);
-    padding: 0.1em 0.2em 0 !important;
-  }
-
-  span.hl2 {
-    font-weight: 700;
-    color: rgb(199, 143, 90);
-    padding: 0.1em 0.2em 0 !important;
+  span {
+    &.hl1 {
+      font-weight: 700;
+      color: rgb(90, 115, 161);
+      padding: 0.1em 0.2em 0 !important;
+    }
+    &.hl2 {
+      font-weight: 700;
+      color: rgb(199, 143, 90);
+      padding: 0.1em 0.2em 0 !important;
+    }
+    &.small {
+      font-size: 0.7em;
+    }
   }
 }
