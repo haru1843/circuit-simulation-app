@@ -5,6 +5,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import styled from "styled-components";
 
 import Header from "./views/components/header";
+import Footer from "./views/components/footer";
 import Top from "./views/pages/top";
 import Usage from "./views/pages/usage";
 import Exercise from "./views/pages/exercise";
@@ -53,6 +54,7 @@ function App() {
             <Route>not found</Route>
           </Switch>
         </div>
+        <Footer></Footer>
       </BrowserRouter>
     </AppDiv>
   );
