@@ -187,7 +187,7 @@ function Work1() {
                 </li>
                 <li>
                   入出力のデバイスとその関係については,
-                  以下に示すGIFアニメーションを参照すること
+                  以下に示すＧＩＦアニメーションを参照すること
                 </li>
                 <div className="gif-container">
                   <div>
