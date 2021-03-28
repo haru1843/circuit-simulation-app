@@ -64,12 +64,11 @@ const Work1Div = styled.div`
 
           opacity: ${(props) => (props.isPlayed ? 1 : 0.2)};
           transition: opacity 600ms;
-          cursor: pointer;
         }
 
         &.icon {
           height: 60%;
-          cursor: pointer;
+          cursor: ${(props) => (props.isPlayed ? "default" : "pointer")};
 
           opacity: ${(props) => (props.isPlayed ? 0 : 1)};
 
