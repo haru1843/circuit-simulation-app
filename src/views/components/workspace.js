@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 const WorkspaceDiv = styled.div`
   margin: 0 3vw;
+  margin-bottom: 3rem;
 
   div.cjb-load-container {
     margin-bottom: 20px;
