@@ -10,12 +10,10 @@ const TopDiv = styled.div`
     /* min-height: 50vh; */
     &:nth-of-type(2n + 1) {
       color: rgb(30, 30, 30);
-
-      /* background-color: rgb(200, 200, 200); */
     }
     &:nth-of-type(2n) {
-      color: rgb(250, 250, 250);
-      background-color: rgb(80, 80, 80);
+      color: rgb(50, 50, 50);
+      background-color: rgb(230, 230, 230);
     }
 
     padding-top: 2rem;
@@ -23,6 +21,22 @@ const TopDiv = styled.div`
 
   section.desc {
     text-align: center;
+    position: relative;
+
+    min-height: 400px;
+
+    span {
+      &.hl1 {
+        font-weight: 700;
+        color: rgb(199, 143, 90);
+        padding: 0.1em 0.2em 0 !important;
+      }
+      &.hl2 {
+        font-weight: 700;
+        color: rgb(90, 115, 161);
+        padding: 0.1em 0.2em 0 !important;
+      }
+    }
 
     div.desc-title {
       font-size: 1.5em;
@@ -30,8 +44,43 @@ const TopDiv = styled.div`
     }
 
     div.desc-content {
-      margin-top: 1rem;
-      padding-bottom: 2.5rem;
+      text-align: left;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+
+      white-space: nowrap;
+    }
+
+    ol {
+      list-style: none;
+      counter-reset: ol-counter;
+
+      li {
+        margin-bottom: 0.3em;
+        &:before {
+          display: inline-block;
+          counter-increment: ol-counter;
+          content: counter(ol-counter);
+
+          background-color: rgb(199, 143, 90);
+          color: white;
+
+          font-size: 1.2em;
+          font-weight: 700;
+          text-align: center;
+          line-height: 1.2em;
+          width: 1.2em;
+          height: 1.2em;
+
+          margin-right: 0.5em;
+
+          border-radius: 50%;
+        }
+      }
     }
   }
 
@@ -46,7 +95,8 @@ const TopDiv = styled.div`
     div.link-grid-container {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      margin: 1rem 5% 2.5rem;
+      margin: 2rem 5% 0rem;
+      padding-bottom: 4rem;
 
       a {
         border-radius: 4px;
@@ -54,7 +104,7 @@ const TopDiv = styled.div`
         background: linear-gradient(
             to bottom,
             rgb(65, 65, 65) 50%,
-            rgb(250, 250, 250) 50%
+            rgb(240, 240, 240) 50%
           )
           bottom;
         background-size: 100% 200%;
@@ -72,6 +122,64 @@ const TopDiv = styled.div`
           color: rgb(255, 255, 255);
           font-weight: 700;
           background-position: top;
+        }
+
+        &.presentation:hover ~ div.link-desc {
+          div.for-presentation {
+            opacity: 1;
+          }
+        }
+
+        &.faq:hover ~ div.link-desc {
+          div.for-faq {
+            opacity: 1;
+          }
+        }
+
+        &.hp:hover ~ div.link-desc {
+          div.for-hp {
+            opacity: 1;
+          }
+        }
+      }
+
+      div.link-desc {
+        grid-row: 2;
+        grid-column: 1 / 4;
+
+        margin: 2rem 2rem 0;
+
+        border-bottom: 1px solid rgb(95, 95, 95);
+        /* border-radius: 8px; */
+
+        height: 2.5em;
+        position: relative;
+
+        div {
+          display: inline-block;
+          opacity: 0;
+
+          img.icon {
+            height: 2em;
+
+            margin-left: calc(0.5em);
+
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          span {
+            display: inline-block;
+            height: 2em;
+            line-height: 2em;
+
+            margin-left: calc(2em + 1.5em);
+
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
         }
       }
     }
@@ -99,8 +207,8 @@ const TopDiv = styled.div`
         -webkit-transform: translate(-50%, -50%);
 
         div {
-          border-bottom: 1px solid rgb(230, 230, 230);
-          width: 200px;
+          border-bottom: 1px solid rgb(80, 80, 80);
+          width: 160px;
           margin: 1.3em 1em;
           font-size: 1.2em;
           transition: 0.2s ease-out;
@@ -109,22 +217,22 @@ const TopDiv = styled.div`
           pointer-events: none;
 
           &:hover {
-            border-bottom: 1px solid rgb(250, 250, 250);
-            box-shadow: 0px 2px 0px rgba(130, 150, 190, 0.6);
+            border-bottom: 1px solid rgb(50, 50, 50);
+            box-shadow: 0px 2px 0px rgba(199, 143, 90, 0.6);
           }
 
           a {
             display: inline-block;
             width: 100%;
             text-decoration: none;
-            color: rgb(230, 230, 230);
+            color: rgb(30, 30, 30);
             transition: 0.2s ease-out;
             text-shadow: 0px 0px 0px rgba(200, 200, 200, 0.6);
 
             pointer-events: auto;
 
             &:hover {
-              color: rgb(255, 255, 255);
+              color: rgb(10, 10, 10);
               text-shadow: 2px 2px 2px rgba(200, 200, 200, 0.6);
             }
           }
@@ -153,33 +261,31 @@ const TopDiv = styled.div`
 function Top() {
   return (
     <TopDiv>
-      <section className="next"></section>
       <section className="desc">
         <div className="desc-title">進め方について</div>
         <div className="desc-content">
-          <span>
-            上部ナビゲーションバーから, 各項目へ移動し取り組む
-            <br />
-          </span>
-          <span>
-            各項目については以下の通り
-            <br />
-          </span>
-          <ul>
-            <li>使い方</li>
-            <li>練習</li>
-            <li>課題１</li>
-            <li>課題２</li>
-          </ul>
-          <span>
-            上記のうち, 「課題１」と「課題２」の構成ファイルを提出する
-          </span>
+          <div>下記に記す順に進めることを想定している</div>
+          <ol>
+            <li>上部ナビゲーションバーから, 各項目へ移動し取り組む</li>
+            <li>「使い方」にて, 基本操作を学ぶ</li>
+            <li>「練習」にて, 実際に回路を組む</li>
+            <li>
+              「課題１」と「課題２」にて課題に取り組み, 構成ファイルを提出する
+            </li>
+          </ol>
+          <div>
+            また, 適宜<span className="hl1">配布資料</span>や
+            <span className="hl1">発表資料</span>,{" "}
+            <span className="hl1">よくある質問</span>を確認し,
+            不備の内容に進めること
+          </div>
         </div>
       </section>
       <section className="link">
         <div className="link-title">参考リンク</div>
         <div className="link-grid-container">
           <a
+            className="presentation"
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.google.com/"
@@ -187,6 +293,7 @@ function Top() {
             発表資料
           </a>
           <a
+            className="faq"
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.google.com/"
@@ -194,12 +301,39 @@ function Top() {
             よくある質問
           </a>
           <a
+            className="hp"
             target="_blank"
             rel="noopener noreferrer"
             href="https://nu-nishimori-lab.netlify.app/"
           >
             研究室ホームページ
           </a>
+          <div className="link-desc">
+            <div className="for-presentation">
+              <img
+                className="icon"
+                src={`${process.env.PUBLIC_URL}/footer/presentation.svg`}
+                alt="プレゼンの画像"
+              ></img>
+              <span>冒頭の発表に利用したプレゼンテーション資料です</span>
+            </div>
+            <div className="for-faq">
+              <img
+                className="icon"
+                src={`${process.env.PUBLIC_URL}/footer/request.svg`}
+                alt="質問の画像"
+              ></img>
+              <span>本演習においてよくある質問について掲載しています</span>
+            </div>
+            <div className="for-hp">
+              <img
+                className="icon"
+                src={`${process.env.PUBLIC_URL}/footer/homepage.svg`}
+                alt="ホームページの画像"
+              ></img>
+              <span>西森研究室の活動内容などが書いてあるホームページです</span>
+            </div>
+          </div>
         </div>
       </section>
       <section className="intro">
