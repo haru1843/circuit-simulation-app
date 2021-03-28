@@ -7,6 +7,8 @@ import "./doc.scss";
 
 const UsageDiv = styled.div`
   z-index: 1;
+  margin-left: 2vw;
+  margin-right: 2vw;
 
   span.o-circle {
     &:after {

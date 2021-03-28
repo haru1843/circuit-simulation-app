@@ -13,8 +13,8 @@ import Work2 from "./views/pages/work2";
 
 const AppDiv = styled.div`
   div.body-container {
-    margin-left: 2vw;
-    margin-right: 2vw;
+    /* margin-left: 2vw;
+    margin-right: 2vw; */
   }
 `;
 

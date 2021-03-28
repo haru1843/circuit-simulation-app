@@ -7,6 +7,9 @@ import "./doc.scss";
 
 const Work1Div = styled.div`
   z-index: 1;
+  margin-left: 2vw;
+  margin-right: 2vw;
+
   li {
     margin-bottom: 0.7em !important;
   }
