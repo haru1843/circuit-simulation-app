@@ -234,8 +234,8 @@ function Work2() {
         </div>
       </section>
       <Workspace
-        loadCircuitIdx={2}
-        saveFileName="t00b000x_work1.cjb"
+        loadCircuitIdx={3}
+        saveFileName="t00b000x_work2.cjb"
       ></Workspace>
     </Work2Div>
   );
