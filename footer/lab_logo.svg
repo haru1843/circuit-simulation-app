@@ -1,0 +1,42 @@
+<svg viewBox="0 0 250 180" xmlns="http://www.w3.org/2000/svg">
+    <style>
+path {
+    stroke: rgb(220,220,220);
+    fill: rgb(220,220,220);
+}
+text.text#l {
+    font-family: "arial", serif;
+    fill: rgb(70, 120, 170);
+    font-weight: 200;
+    font-size: 120px;
+}
+text.text#ab {
+    font-family: "arial", serif;
+    fill: rgb(70, 120, 170);
+    font-weight: 600;
+    font-size: 70px;
+}
+text.text#lower {
+    font-family: "arial", serif;
+    fill: rgb(220,220,220);
+    font-weight: 600;
+    font-size: 28px;
+    letter-spacing: 8px;
+}
+    </style>
+    <g>
+        <path stroke-width="5" d="M 55 70 l -30 -50 h 60 z v 50" />
+        <path stroke-width="10" id="bar1" d="M 80 120 v -40" />
+        <path stroke-width="10" id="bar2" d="M 105 120 v -60" />
+        <path stroke-width="3" id="under-bar" d="M 20 132 h 210" />
+    </g>
+    <text x="118" y="120" class="text" id="l">
+          l
+        </text>
+    <text x="145" y="120" class="text" id="ab">
+          ab
+        </text>
+    <text x="28" y="164" class="text" id="lower">
+          Nishimori
+        </text>
+</svg>
