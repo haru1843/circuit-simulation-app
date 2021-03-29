@@ -1,42 +1,41 @@
 <svg viewBox="0 0 250 180" xmlns="http://www.w3.org/2000/svg">
     <style>
-path {
-    stroke: rgb(220,220,220);
-    fill: rgb(220,220,220);
+        path {
+    stroke: rgb(200,200,200);
+    fill: rgb(200,200,200);
 }
-text.text#l {
-    font-family: "arial", serif;
-    fill: rgb(70, 120, 170);
-    font-weight: 200;
-    font-size: 120px;
+path#l {
+    stroke: rgb(70, 120, 170);
 }
 text.text#ab {
     font-family: "arial", serif;
     fill: rgb(70, 120, 170);
     font-weight: 600;
     font-size: 70px;
+    letter-spacing: 0px;
 }
 text.text#lower {
     font-family: "arial", serif;
-    fill: rgb(220,220,220);
+    fill: rgb(200,200,200);
     font-weight: 600;
     font-size: 28px;
-    letter-spacing: 8px;
+    letter-spacing: 4px;
 }
     </style>
     <g>
-        <path stroke-width="5" d="M 55 70 l -30 -50 h 60 z v 50" />
-        <path stroke-width="10" id="bar1" d="M 80 120 v -40" />
-        <path stroke-width="10" id="bar2" d="M 105 120 v -60" />
-        <path stroke-width="3" id="under-bar" d="M 20 132 h 210" />
+        <path stroke-width="5" d="M 52 70 l -20 -40 h 40 z v 40" />
+        <path stroke-width="10" id="bar1" d="M 70 110 v -35" />
+        <path stroke-width="10" id="bar2" d="M 90 110 v -58" />
+        <path stroke-width="10" id="l" d="M 110 110 v -80" />
+        <path stroke-width="3" id="under-bar" d="M 25 122 h 185" />
     </g>
-    <text x="118" y="120" class="text" id="l">
+    <!-- <text x="118" y="120" class="text" id="l">
           l
-        </text>
-    <text x="145" y="120" class="text" id="ab">
+        </text> -->
+    <text x="120" y="110" class="text" id="ab">
           ab
         </text>
-    <text x="28" y="164" class="text" id="lower">
+    <text x="37" y="152" class="text" id="lower">
           Nishimori
         </text>
 </svg>
