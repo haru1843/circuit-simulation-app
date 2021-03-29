@@ -296,7 +296,7 @@ function Top() {
             className="faq"
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.google.com/"
+            href="https://www.notion.so/7f5658db1d1544dca7c04bd93cb10b52"
           >
             よくある質問
           </a>
