@@ -23,10 +23,20 @@ const HeaderDiv = styled.div`
   z-index: 99999;
 
   span.header-logo-container {
+    position: relative;
     display: inline-block;
     height: 48px;
 
     img {
+      height: 100%;
+    }
+
+    a {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
       height: 100%;
     }
   }
@@ -82,11 +92,9 @@ function Header(props) {
                 src={`${process.env.PUBLIC_URL}/footer/lab_logo.svg`}
                 alt="デバイスの画像"
               ></img>
+              <Link to="/circuit-simulation-app/"></Link>
             </span>
             <div className="header-right">
-              <div className="link-div">
-                <Link to="/circuit-simulation-app/">トップ</Link>
-              </div>
               <div className="link-div">
                 <Link to="/circuit-simulation-app/usage">使い方</Link>
               </div>
