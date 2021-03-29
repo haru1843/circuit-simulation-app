@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/circuit-simulation-app/static/css/main.624713d5.chunk.css",
-    "main.js": "/circuit-simulation-app/static/js/main.62bee386.chunk.js",
-    "main.js.map": "/circuit-simulation-app/static/js/main.62bee386.chunk.js.map",
+    "main.js": "/circuit-simulation-app/static/js/main.79ba907d.chunk.js",
+    "main.js.map": "/circuit-simulation-app/static/js/main.79ba907d.chunk.js.map",
     "runtime-main.js": "/circuit-simulation-app/static/js/runtime-main.bfe985d8.js",
     "runtime-main.js.map": "/circuit-simulation-app/static/js/runtime-main.bfe985d8.js.map",
     "static/js/2.636a3383.chunk.js": "/circuit-simulation-app/static/js/2.636a3383.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.bfe985d8.js",
     "static/js/2.636a3383.chunk.js",
     "static/css/main.624713d5.chunk.css",
-    "static/js/main.62bee386.chunk.js"
+    "static/js/main.79ba907d.chunk.js"
   ]
 }
