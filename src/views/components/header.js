@@ -22,13 +22,22 @@ const theme = createMuiTheme({
 const HeaderDiv = styled.div`
   z-index: 99999;
 
+  span.header-logo-container {
+    display: inline-block;
+    height: 48px;
+
+    img {
+      height: 100%;
+    }
+  }
+
   div.header-right {
     margin-left: auto;
     /* margin-right: -12; */
 
     .link-div {
       border-left: 2px solid #505050;
-      width: 150px;
+      width: 130px;
       text-align: center;
       display: inline-block;
       /* margin: 0; */
@@ -67,7 +76,13 @@ function Header(props) {
       <ThemeProvider theme={theme}>
         <AppBar position="static">
           <Toolbar>
-            <span>回路シミュレータ</span>
+            <span className="header-logo-container">
+              <img
+                className="lab-logo"
+                src={`${process.env.PUBLIC_URL}/footer/lab_logo.svg`}
+                alt="デバイスの画像"
+              ></img>
+            </span>
             <div className="header-right">
               <div className="link-div">
                 <Link to="/circuit-simulation-app/">トップ</Link>
