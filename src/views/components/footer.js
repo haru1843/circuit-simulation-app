@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 const FooterrDiv = styled.div`
   z-index: 99999;
+  position: relative;
 
   display: flex;
   align-items: center;

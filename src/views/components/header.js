@@ -21,6 +21,7 @@ const theme = createMuiTheme({
 
 const HeaderDiv = styled.div`
   z-index: 99999;
+  position: relative;
 
   span.header-logo-container {
     position: relative;
