@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 import styled from "styled-components";
 
 import Workspace from "../components/workspace";
+import ImgPopup from "../components/imgPopup";
 import "./doc.scss";
 
 const UsageDiv = styled.div`
@@ -130,6 +131,17 @@ const UsageDiv = styled.div`
           padding: 0.8em 0.5em 0 !important;
 
           font-size: 14px;
+
+          & .img-popup {
+            color: rgb(230, 90, 30);
+            font-weight: 700;
+
+            cursor: pointer;
+
+            &:hover {
+              color: rgb(159, 80, 50);
+            }
+          }
         }
       }
     }
@@ -137,8 +149,16 @@ const UsageDiv = styled.div`
 `;
 
 function Usage() {
+  const [isShow, setShow] = useState(false);
+
   return (
     <UsageDiv>
+      <ImgPopup
+        show={isShow}
+        imgSrc={`${process.env.PUBLIC_URL}/usage/segment.png`}
+        imgAlt="セグメントの対応画像"
+        close={() => setShow(false)}
+      ></ImgPopup>
       <section className="doc">
         <div className="page-title">
           <span>使い方</span>
@@ -418,8 +438,11 @@ function Usage() {
                   </div>
                   <span className="device-name">７セグメントディスプレイ</span>
                   <span className="device-desc">
-                    入力に応じたセグメントが光ります.
-                    入力と各セグメントの対応はこちら.
+                    入力に応じたセグメントが光ります. 入力と各セグメントの対応は
+                    <span className="img-popup" onClick={() => setShow(true)}>
+                      こちら
+                    </span>
+                    .
                   </span>
                 </div>
               </span>
