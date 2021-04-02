@@ -53,6 +53,14 @@
     />
     <title>回路シミュレータ</title>
     <script>
+      const path = sessionStorage.getItem("path");
+      console.log(path);
+      if (path && path === "/react-from-meta-lang/other") {
+        sessionStorage.removeItem("path");
+        window.history.replaceState(null, null, "./other");
+      }
+    </script>
+    <script>
       function loadCircuit(circuitIdx) {
         const circuitStructures = [
           {
