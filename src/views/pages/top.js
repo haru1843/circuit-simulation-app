@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import styled from "styled-components";
 
+import OuterLinkSvg from "../components/outerLinkSvg";
+
 const TopDiv = styled.div`
   z-index: 1;
 
@@ -140,6 +142,22 @@ const TopDiv = styled.div`
           div.for-hp {
             opacity: 1;
           }
+        }
+
+        position: relative;
+        svg {
+          height: 0.7em;
+          fill: rgb(60, 60, 60);
+
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%) translateX(30%);
+
+          transition: 0.2s ease-out;
+        }
+
+        &:hover svg {
+          fill: rgb(240, 240, 240);
         }
       }
 
@@ -291,6 +309,7 @@ function Top() {
             href="https://www.dropbox.com/scl/fi/ztm3jufc9hf15lcxp9xr5/_.pptx?dl=0&rlkey=lwk391t394oeabnv46ucty2fv"
           >
             発表資料
+            <OuterLinkSvg></OuterLinkSvg>
           </a>
           <a
             className="faq"
@@ -299,6 +318,7 @@ function Top() {
             href="https://www.notion.so/7f5658db1d1544dca7c04bd93cb10b52"
           >
             よくある質問
+            <OuterLinkSvg></OuterLinkSvg>
           </a>
           <a
             className="hp"
@@ -307,6 +327,7 @@ function Top() {
             href="https://nu-nishimori-lab.netlify.app/"
           >
             研究室ホームページ
+            <OuterLinkSvg></OuterLinkSvg>
           </a>
           <div className="link-desc">
             <div className="for-presentation">
