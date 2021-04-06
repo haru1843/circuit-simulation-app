@@ -57,10 +57,10 @@ const UsageDiv = styled.div`
   span.device-tips {
     display: inline-block;
     vertical-align: top;
-    width: 310px;
+    width: 320px;
     height: 120px;
 
-    margin: 1em 0.5em 0 !important;
+    margin: 0.8em 0.3em 0 !important;
 
     /* border: 1px solid rgb(90, 115, 161); */
     border: 1px solid rgb(140, 140, 140);
@@ -130,7 +130,10 @@ const UsageDiv = styled.div`
           margin: 0 5px;
           padding: 0.8em 0.5em 0 !important;
 
-          font-size: 14px;
+          font-size: 13px;
+          font-family: "M PLUS 1p", "Helvetica Neue", Arial, sans-serif;
+          font-weight: 300;
+          line-height: 18px;
 
           & .img-popup {
             color: rgb(230, 90, 30);
