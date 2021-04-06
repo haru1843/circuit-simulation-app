@@ -288,7 +288,7 @@ function Top() {
             className="presentation"
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.google.com/"
+            href="https://www.dropbox.com/scl/fi/ztm3jufc9hf15lcxp9xr5/_.pptx?dl=0&rlkey=lwk391t394oeabnv46ucty2fv"
           >
             発表資料
           </a>
