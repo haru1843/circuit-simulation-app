@@ -150,7 +150,6 @@ function Workspace(props) {
   };
 
   const upload = function (event) {
-    console.log(event.target.value);
     if (event.target.value !== "") {
       var reader_ = new FileReader();
 
