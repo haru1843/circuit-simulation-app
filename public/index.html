@@ -55,12 +55,9 @@
     <script>
       const path = sessionStorage.getItem("path");
       sessionStorage.removeItem("path");
+      console.log(path);
       if (path) {
-        window.history.replaceState(
-          null,
-          null,
-          "/circuit-simulation-app/usage"
-        );
+        window.history.replaceState(null, null, `./${path}`);
       }
 
       // if (path && path === "/react-from-meta-lang/other") {
