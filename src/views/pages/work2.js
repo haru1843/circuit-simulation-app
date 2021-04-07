@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import styled from "styled-components";
 
@@ -106,6 +106,11 @@ function Work2() {
       setPlay(false);
     }, 10100);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Work2Div isPlayed={isPlayed}>
       <section className="doc">

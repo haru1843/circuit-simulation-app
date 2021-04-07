@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import styled from "styled-components";
 
@@ -153,6 +153,10 @@ const UsageDiv = styled.div`
 
 function Usage() {
   const [isShow, setShow] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <UsageDiv>
