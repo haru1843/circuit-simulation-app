@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import styled from "styled-components";
 
@@ -134,6 +134,8 @@ function Workspace(props) {
   //  .loadCircuitIdx: 初期ロード対象の回路インデックス(0始まり)
   //  .saveFileName: 回路構成ダウンロード時のファイル名
 
+  const [inputVal, setInputVal] = useState("");
+
   const initCircuit = '{"height": 700, "width":2000}';
   const loadButtonId = `load-circuit-${props.loadCircuitIdx}`;
 
@@ -148,21 +150,24 @@ function Workspace(props) {
   };
 
   const upload = function (event) {
-    var reader_ = new FileReader();
+    console.log(event.target.value);
+    if (event.target.value !== "") {
+      var reader_ = new FileReader();
 
-    reader_.onload = function () {
-      let date_array = new Uint8Array(reader_.result.slice(0, 9));
-      let text_array = new Uint8Array(reader_.result.slice(10));
+      reader_.onload = function () {
+        let date_array = new Uint8Array(reader_.result.slice(0, 9));
+        let text_array = new Uint8Array(reader_.result.slice(10));
 
-      for (let i = 0; i < text_array.length; i++) {
-        text_array[i] -= date_array[8];
-      }
+        for (let i = 0; i < text_array.length; i++) {
+          text_array[i] -= date_array[8];
+        }
 
-      const text = new TextDecoder("utf-8").decode(text_array);
+        const text = new TextDecoder("utf-8").decode(text_array);
 
-      updateCircuit(text);
-    };
-    reader_.readAsArrayBuffer(event.target.files[0]);
+        updateCircuit(text);
+      };
+      reader_.readAsArrayBuffer(event.target.files[0]);
+    }
   };
 
   const download = function (event) {
@@ -186,7 +191,13 @@ function Workspace(props) {
         </div>
         <div className="pad"></div>
         <div className="button-div">
-          <input type="file" id="ul-button" onChange={(e) => upload(e)}></input>
+          <input
+            type="file"
+            id="ul-button"
+            value={inputVal}
+            onChange={(e) => upload(e)}
+            onClick={() => setInputVal("")} // 同名ファイルのアップロード時の対策
+          ></input>
           <label htmlFor="ul-button">
             <span className="dummy-icon"></span>
             <img
