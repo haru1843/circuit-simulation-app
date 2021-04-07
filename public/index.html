@@ -55,10 +55,11 @@
     <script>
       const path = sessionStorage.getItem("path");
       sessionStorage.removeItem("path");
-      console.log(path);
-      if (path) {
-        window.history.replaceState(null, null, `./${path}`);
+      const subpath = path.match("/circuit-simulation-app/(.*)")[1];
+      if (subpath) {
+        window.history.replaceState(null, null, `./${subpath}`);
       }
+      oa;
 
       // if (path && path === "/react-from-meta-lang/other") {
       // }
