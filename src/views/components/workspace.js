@@ -175,14 +175,6 @@ function Workspace(props) {
       <div className="cjb-load-container">
         <div className="pad"></div>
         <div className="button-div">
-          {/* <a id="dl-button" type="file" href="/#" onClick={(e) => download(e)}>
-            <span className="dummy-icon"></span>
-            <img
-              src={`${process.env.PUBLIC_URL}/load-button/dl.svg`}
-              alt="ダウンロードの画像"
-            ></img>
-            <span className="button-text">回路構成をダウンロード</span>
-          </a> */}
           <button id="dl-button" onClick={(e) => download(e)}>
             <span className="dummy-icon"></span>
             <img
