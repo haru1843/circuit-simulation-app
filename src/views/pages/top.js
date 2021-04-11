@@ -298,8 +298,7 @@ function Top() {
           <div>
             また, 適宜<span className="hl1">配布資料</span>や
             <span className="hl1">発表資料</span>,{" "}
-            <span className="hl1">よくある質問</span>を確認し,
-            不備の内容に進めること
+            <span className="hl1">よくある質問</span>を確認しながら進めること.
           </div>
         </div>
       </section>
