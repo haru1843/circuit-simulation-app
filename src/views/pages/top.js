@@ -9,7 +9,6 @@ const TopDiv = styled.div`
   z-index: 1;
 
   section {
-    /* min-height: 50vh; */
     &:nth-of-type(2n + 1) {
       color: rgb(30, 30, 30);
     }
@@ -168,7 +167,6 @@ const TopDiv = styled.div`
         margin: 2rem 2rem 0;
 
         border-bottom: 1px solid rgb(95, 95, 95);
-        /* border-radius: 8px; */
 
         height: 2.5em;
         position: relative;
@@ -365,19 +363,15 @@ function Top() {
         <div className="intro-content-container">
           <div className="intro-content">
             <div>
-              {/* <img></img> */}
               <Link to="/circuit-simulation-app/usage">使い方</Link>
             </div>
             <div>
-              {/* <img></img> */}
               <Link to="/circuit-simulation-app/exercise">練習</Link>
             </div>
             <div>
-              {/* <img></img> */}
               <Link to="/circuit-simulation-app/work1">課題1</Link>
             </div>
             <div>
-              {/* <img></img> */}
               <Link to="/circuit-simulation-app/work2">課題2</Link>
             </div>
           </div>

@@ -1,5 +1,4 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 
 import styled from "styled-components";
 
@@ -21,11 +20,6 @@ const FooterrDiv = styled.div`
 
   span {
     display: inline-block;
-
-    /* position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%); */
 
     &.righting {
     }

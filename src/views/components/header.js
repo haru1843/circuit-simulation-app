@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import MediaQuery, { useMediaQuery } from "react-responsive";
 
 import styled from "styled-components";
 
@@ -44,14 +43,12 @@ const HeaderDiv = styled.div`
 
   div.header-right {
     margin-left: auto;
-    /* margin-right: -12; */
 
     .link-div {
       border-left: 2px solid #505050;
       width: 130px;
       text-align: center;
       display: inline-block;
-      /* margin: 0; */
 
       a {
         color: rgb(200, 200, 200);

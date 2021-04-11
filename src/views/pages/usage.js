@@ -62,7 +62,6 @@ const UsageDiv = styled.div`
 
     margin: 0.8em 0.3em 0 !important;
 
-    /* border: 1px solid rgb(90, 115, 161); */
     border: 1px solid rgb(140, 140, 140);
     border-radius: 5px;
 
@@ -90,7 +89,6 @@ const UsageDiv = styled.div`
 
         img {
           display: inline-block;
-          /* width: 40px; */
           height: 40px;
           margin-top: 0 !important;
 
