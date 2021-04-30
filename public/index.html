@@ -55,10 +55,10 @@
     <script>
       const path = sessionStorage.getItem("path");
       sessionStorage.removeItem("path");
-      console.log(`path: ${path}`);
+      // console.log(`path: ${path}`);
       if (path) {
         const subpath = path.match("/circuit-simulation-app/(.*)")[1];
-        console.log(`subpath: ${subpath}`);
+        // console.log(`subpath: ${subpath}`);
         window.history.replaceState(null, null, `./${subpath}`);
       }
     </script>
