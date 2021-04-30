@@ -142,7 +142,7 @@ function Workspace(props) {
   // class componentでの'componentDidMout' とか 'componentDidUpdate'とかと類似
   useEffect(() => {
     document.getElementById(loadButtonId).click();
-  });
+  }, []);
 
   const updateCircuit = function (text) {
     document.getElementById("update-circuit").value = text;
