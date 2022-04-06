@@ -24,6 +24,7 @@ section.doc {
         border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
       }
+
       &:nth-of-type(2) {
         background-color: rgb(73, 73, 73);
         padding-left: 0.5em;
@@ -48,6 +49,7 @@ section.doc {
         border-bottom: 2px solid rgb(40, 40, 40);
 
         box-shadow: 0px 3px 0px rgba(90, 115, 161, 0.5);
+
         img {
           position: relative;
           top: 0.3rem;
@@ -55,6 +57,7 @@ section.doc {
           margin-right: 0.2em;
         }
       }
+
       div.desc-cont {
         font-size: 0.85rem;
 
@@ -96,6 +99,7 @@ section.doc {
 
           li {
             margin-bottom: 0.2em;
+
             &:before {
               display: inline-block;
               counter-increment: ol-counter;
@@ -127,11 +131,13 @@ section.doc {
       color: rgb(90, 115, 161);
       padding: 0.1em 0.2em 0 !important;
     }
+
     &.hl2 {
       font-weight: 700;
       color: rgb(199, 143, 90);
       padding: 0.1em 0.2em 0 !important;
     }
+
     &.small {
       font-size: 0.7em;
     }

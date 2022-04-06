@@ -23,6 +23,9 @@ const FooterrDiv = styled.div`
 
     &.righting {
     }
+    &.strike {
+      text-decoration: line-through;
+    }
     &.link-container {
       margin-left: auto;
       margin-right: 2rem;
@@ -63,8 +66,9 @@ function Footer(props) {
           target="_blank"
           rel="noopener noreferrer"
           href="https://nu-nishimori-lab.netlify.app/"
+          style={{ pointerEvents: "none" }}
         >
-          研究室HP
+          <span className="strike">研究室HP</span>
         </a>
       </span>
     </FooterrDiv>

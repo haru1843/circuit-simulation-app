@@ -307,7 +307,7 @@ function Top() {
             className="presentation"
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.dropbox.com/scl/fi/ztm3jufc9hf15lcxp9xr5/_.pptx?dl=0&rlkey=lwk391t394oeabnv46ucty2fv"
+            href="https://www.dropbox.com/scl/fi/hc4tav2vvahe7vj4tffkp/2022.pptx?dl=0&rlkey=n5n0zfjig52w6ok2qqtgxcad6"
           >
             発表資料
             <OuterLinkSvg></OuterLinkSvg>
@@ -326,9 +326,10 @@ function Top() {
             target="_blank"
             rel="noopener noreferrer"
             href="https://nu-nishimori-lab.netlify.app/"
+            style={{ pointerEvents: "none" }}
           >
-            研究室ホームページ
-            <OuterLinkSvg></OuterLinkSvg>
+            <span style={{ textDecoration: "line-through" }}>研究室ホームページ</span>
+            {/* <OuterLinkSvg></OuterLinkSvg> */}
           </a>
           <div className="link-desc">
             <div className="for-presentation">
